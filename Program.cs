@@ -25,10 +25,22 @@ class MainClass
         Console.WriteLine("What is your favorite day of week?");
         DayOfWeek day = (DayOfWeek) int.Parse(Console.ReadLine());
         Console.WriteLine($"You favotite day is {day}");
-        Console.ReadKey();
+
+
+
+        //new task
+        Console.WriteLine("What is your name: ");
+        var namet = Console.ReadLine();
+        Console.WriteLine("What is your age: ");
+        var aget = checked((byte)int.Parse(Console.ReadLine()));
+        Console.WriteLine("Your name is {0} and age is {1} ", namet, aget);
+
+        Console.Write("What is your favorite day of week? ");
+
+        var dayt = (DayOfWeek)int.Parse(Console.ReadLine());
+        Console.WriteLine("Your favorite day is {0}", dayt);
+        FinalTask();
     }
-
-
 
     enum DayOfWeek : byte
     {
@@ -48,5 +60,18 @@ class MainClass
         green = 300
     }
 
-    
+
+    static void FinalTask()
+    {
+        Console.WriteLine("Enter your name:");
+        var name = Console.ReadLine();
+        Console.WriteLine("Enter your age:");
+        var age = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Your name is {name}, your age is {age}");
+        Console.WriteLine("Enter youre birthdate:");
+        var birthdate = Console.ReadLine();
+        Console.WriteLine($"Your birthdate {birthdate}");
+        Console.ReadKey();
+    }
+  
 }
